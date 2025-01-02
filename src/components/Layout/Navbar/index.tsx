@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <nav className={navstyles["navbar"]}>
       <div className={navstyles["navbar-container"]}>
         <div className={navstyles["navbar-logo"]}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
         </div>
 
         {/* Hamburger/Close menu icon */}
