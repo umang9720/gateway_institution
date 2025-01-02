@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.loginPage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+    .textOverlaycontainer {
+      width: 649px;
+      height: 349px;
+  margin-top: 238px;
+      margin-left: 52px;
+      border-radius: 150px 0px 150px 0px;
+      background: rgba(43, 43, 43, 0.74);
+    
+
+    .textOverlay {
+      position: absolute;
+      width: 665px;
+      height: 359px;
+      top: 252px;
+      left: 63px;
+      border-radius: 150px 0px 150px 0px;
+      border: 1px solid rgba(255, 255, 255, 1);
+// text-align: center;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); // Optional dark overlay effect
+}
+
+.loginWrapper {
+  height: 650px;
+  min-width: 26rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(20, 20, 20, 0.87);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: 50px;
+
+  .logoContainer {
+    text-align: center;
+    margin-top: 50px;
+    .logoImg {
+      width: 130px;
+    }
+  }
+  .createAccountContainer {
+    text-align: center;
+  }
+
+  .createAccountHelperText {
+    color: #707070;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .createAccountBtn {
+    padding: 12px 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(179, 179, 179, 1);
+    font-family: Russo One;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.69px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(179, 179, 179, 1);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.loginContainer {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 47px 0 29px;
+
+  .loginTitle {
+    margin: 0;
+    color: rgba(205, 205, 205, 1);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Russo One;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .formWrapper {
+    display: flex;
+    margin-top: 48px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 26px;
+    border-radius: 16px;
+  }
+
+  .inputContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.15px;
+    justify-content: start;
+    font-size: 400;
+  }
+
+  .userField {
+    margin-bottom: 0.5rem;
+  }
+
+  .forgotPassword {
+    color: #696969;
+    letter-spacing: 0.17px;
+    margin-top: 18px;
+    font-size: 400;
+  }
+
+  .divider {
+    margin-top: 32px;
+    width: 100%;
+    height: 1px;
+    color: black;
+  }
+
+  .loginButton {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: rgba(0, 210, 192, 1);
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    padding: 12px 40px;
+    font-family: Russo One;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.92px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+.textcontainer{
+  width: 519px;
+height: 195px;
+margin-top: 60px;
+margin-left:100px;
+
+.text{
+font-family: Russo One;
+font-size: 40px;
+font-weight: 400;
+line-height: 48.2px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: rgba(255, 255, 255, 1);
+}
+
+.subtext{
+  font-family: outfit;
+font-size: 20px;
+font-weight: 400;
+line-height: 29.66px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: rgba(255, 255, 255, 1);
+}
+}

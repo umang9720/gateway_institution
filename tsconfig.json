@@ -11,16 +11,29 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "paths": {
+      "containers": ["./containers"],
+      "components": ["./components"],
+      "services": ["./services"],
+      "constants": ["./constants"],
+      "utils": ["./utils"],
+      "context": ["./context"],
+      "assets": ["./assets"],
+      "hooks": ["./hooks"]
+    },
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*", "src/declarations.d.ts"],
+  "exclude": ["node_modules", "build", "src/public"]
 }
