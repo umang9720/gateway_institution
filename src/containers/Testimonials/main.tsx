@@ -122,7 +122,7 @@ const Testimonials: React.FC = () => {
           <img src={image4} alt="Center" className={HomeStyles["center-image"]} />
         </div>
       </div>
-       {/* ------------------------------------------------box-5---------------------------------------------------------------------------*/}
+       {/* ------------------------------------------------box-5------e---------------------------------------------------------------------*/}
 
        <div className={HomeStyles['hero-content-5']}>
        <div className={HomeStyles['image-container']}>

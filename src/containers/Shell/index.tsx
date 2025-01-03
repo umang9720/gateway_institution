@@ -1,22 +1,44 @@
-import React from "react";
-import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
-import { appRoutes, ROUTES_ENUM } from "constants/routes";
-import ShellStyles from "./shell.module.scss";
-import Home from "containers/New home";
-import Students from "containers/Benefits/students";
-const Login = React.lazy(() => import("containers/Login"));
+import React from 'react';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom'; // Updated imports
+import { appRoutes, ROUTES_ENUM } from 'constants/routes';
+import ShellStyles from './shell.module.scss';
+import Layout from 'components/Layout';
+import Home from 'containers/Home'; // Fixed folder name
+import EmptyLayout from 'components/EmptyLayout';
+
+const Login = React.lazy(() => import('containers/Login'));
 
 const Shell: React.FC = () => {
+  console.log('appRoutes:', appRoutes); // Debugging appRoutes
+  console.log('ROUTES_ENUM:', ROUTES_ENUM); // Debugging ROUTES_ENUM
+
   return (
-    <div className={ShellStyles["shell"]}>
-      <React.Suspense fallback={<div>Loading...</div>}>
+    <div className={ShellStyles['shell']}>
+      <React.Suspense fallback={<div className="loader">Loading...</div>}>
         <BrowserRouter>
           <Routes>
-            <Route path={appRoutes[ROUTES_ENUM.LOGIN]} element={<Login />} />
-            <Route path={appRoutes[ROUTES_ENUM.HOME]} element={<Home />} />
-            <Route path={appRoutes[ROUTES_ENUM.STUDENTS]} element={<Students />} />
-            <Route path="/" element={<Navigate to={appRoutes[ROUTES_ENUM.HOME]} replace />} />
-            <Route path="*" element={<Navigate to={appRoutes[ROUTES_ENUM.LOGIN]} replace />} />
+            <Route
+              path={appRoutes[ROUTES_ENUM.LOGIN]}
+              element={
+                <EmptyLayout>
+                  <Login />
+                </EmptyLayout>
+              }
+            />
+            <Route
+              path={appRoutes[ROUTES_ENUM.HOME]}
+              element={
+                <Layout>
+                  <Home />
+                </Layout>
+              }
+            />
+
+            {/* Redirect updated using Navigate */}
+            <Route
+              path="/"
+              element={<Navigate to={appRoutes[ROUTES_ENUM.HOME]} replace />}
+            />
           </Routes>
         </BrowserRouter>
       </React.Suspense>

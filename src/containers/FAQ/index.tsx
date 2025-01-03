@@ -1,6 +1,6 @@
 import React from 'react';
 import image from 'assets/images/fqs 1.png';
-import bars from 'assets/images/Group 1171280735.png'
+import bars from 'assets/images/bars.png'
 import faqstyles from './faq.module.scss';
 
 const FAQ: React.FC = () => {
